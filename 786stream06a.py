@@ -18,7 +18,7 @@ col1, col2 = st.columns([3, 2])
 
 with col1:
     # Code input area
-    code_input = st.text_area("Enter Python code:", height=300, placeholder="Type your Python code here...")
+    code_input = st.text_area("Enter Python code:", height=250, placeholder="Type your Python code here...")
 
     # Button to execute the code
     if st.button("Run Code"):
@@ -50,7 +50,7 @@ with col1:
             sys.stdout = old_stdout
 
         # Display the latest output in a results text area
-        st.text_area("Results:", value=st.session_state.output, height=300, disabled=True)
+        st.text_area("Results:", value=st.session_state.output, height=250, disabled=True)
 
 with col2:
     # Command History Section
