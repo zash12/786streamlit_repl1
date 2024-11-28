@@ -14,11 +14,11 @@ st.title("Python REPL in Streamlit")
 st.write("A simple Python REPL (Read-Eval-Print Loop) built with Streamlit.")
 
 # Layout: Create two columns: one for the code input, and one for command history
-col1, col2 = st.columns([2, 1])
+col1, col2 = st.columns([3, 2])
 
 with col1:
     # Code input area
-    code_input = st.text_area("Enter Python code:", height=150, placeholder="Type your Python code here...")
+    code_input = st.text_area("Enter Python code:", height=300, placeholder="Type your Python code here...")
 
     # Button to execute the code
     if st.button("Run Code"):
@@ -50,7 +50,7 @@ with col1:
             sys.stdout = old_stdout
 
         # Display the latest output in a results text area
-        st.text_area("Results:", value=st.session_state.output, height=150, disabled=True)
+        st.text_area("Results:", value=st.session_state.output, height=300, disabled=True)
 
 with col2:
     # Command History Section
